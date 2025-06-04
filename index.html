@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <style>
+        <style>
         body {
             font-family: 'Comic Sans MS', sans-serif;
-            background-image: url('https://kittydev1/home-page/background.png');
+            background-image: url('background.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -23,7 +23,6 @@
             -1px -1px 0px rgb(20, 17, 29),
             1px -1px 0px rgb(20, 17, 29),
             -1px 1px 0px rgb(20, 17, 29);
-
         }
         img {
             width: 200px;
@@ -33,9 +32,8 @@
         .cat-images {
             display: none;
             margin-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, mixmax(200ox, lfr));
-            gap: 5px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
         }
         .toggle-link {
             cursor: pointer;
@@ -47,16 +45,16 @@
             1px -1px 0px rgb(20, 17, 29),
             -1px 1px 0px rgb(20, 17, 29);
         }
-    </style>
+        </style>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>🐈</svg>">
     </head>
     <body>
         <h1>welcome to my website!</h1>
         <span class="toggle-link" onclick="toggleImages()">here are a couple pictures of my cats. (click to see)</span>
-        <div class="cat-images" id="catImages"></div>
-            <img src="cat1.jpg">
-            <img src="cat2.jpg">
-            <img src="cat3.jpg">
+        <div class="cat-images" id="catImages">
+            <img src="cat1.jpg" alt="kitcat!">
+            <img src="cat2.jpg" alt="chimmi!">
+            <img src="cat3.jpg" alt="changa!">
         </div>
         <script>
             function toggleImages() {
