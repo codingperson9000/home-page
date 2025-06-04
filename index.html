@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-image: url('https://kittydev1/home-page/background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 30px;
+            text-align: center;
+        }
+        h1, h2, h3, h4, p {
+            color: rgb(255, 252, 211);
+            text-shadow:
+            1px 1px 0px rgb(20, 17, 29),
+            -1px -1px 0px rgb(20, 17, 29),
+            1px -1px 0px rgb(20, 17, 29),
+            -1px 1px 0px rgb(20, 17, 29);
+
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin: 10px;
+        }
+        .cat-images {
+            display: none;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, mixmax(200ox, lfr));
+            gap: 5px;
+        }
+        .toggle-link {
+            cursor: pointer;
+            color: rgb(255, 252, 211);
+            text-decoration: underline;
+            text-shadow:
+            1px 1px 0px rgb(20, 17, 29),
+            -1px -1px 0px rgb(20, 17, 29),
+            1px -1px 0px rgb(20, 17, 29),
+            -1px 1px 0px rgb(20, 17, 29);
+        }
+    </style>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>🐈</svg>">
+    </head>
+    <body>
+        <h1>welcome to my website!</h1>
+        <span class="toggle-link" onclick="toggleImages()">here are a couple pictures of my cats. (click to see)</span>
+        <div class="cat-images" id="catImages"></div>
+            <img src="cat1.jpg">
+            <img src="cat2.jpg">
+            <img src="cat3.jpg">
+        </div>
+        <script>
+            function toggleImages() {
+                const images = document.getElementById('catImages');
+                if (images.style.display === 'none' || images.style.display === '') {
+                    images.style.display = 'grid';
+                } else {
+                    images.style.display = 'none';
+                }
+            }
+        </script>
+    </body>
+</html>
