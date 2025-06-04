@@ -4,7 +4,7 @@
         <style>
         body {
             font-family: 'Comic Sans MS', sans-serif;
-            background-image: url('background.png');
+            background-image: url('background.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -32,6 +32,9 @@
         .cat-images {
             display: none;
             margin-top: 20px;
+        }
+        .cat-images.show {
+            display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
         }
@@ -52,17 +55,17 @@
         <h1>welcome to my website!</h1>
         <span class="toggle-link" onclick="toggleImages()">here are a couple pictures of my cats. (click to see)</span>
         <div class="cat-images" id="catImages">
-            <img src="cat1.jpg" alt="kitcat!">
-            <img src="cat2.jpg" alt="chimmi!">
-            <img src="cat3.jpg" alt="changa!">
+            <img src="cat1.jpg" alt="Cat 1">
+            <img src="cat2.jpg" alt="Cat 2">
+            <img src="cat3.jpg" alt="Cat 3">
         </div>
         <script>
             function toggleImages() {
                 const images = document.getElementById('catImages');
-                if (images.style.display === 'none' || images.style.display === '') {
-                    images.style.display = 'grid';
+                if (images.classList.contains('show')) {
+                    images.classList.remove('show');
                 } else {
-                    images.style.display = 'none';
+                    images.classList.add('show');
                 }
             }
         </script>
